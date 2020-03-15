@@ -1,0 +1,221 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: "montserrat", sans-serif;
+}
+body{
+	background-image: url("/images/background-2.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	color: #ffffff;
+	width: 100%;
+}
+header{
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 0 100px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background: rgba(0,0,0,.6);
+	width: 100%;
+	box-sizing: border-box;
+	border: 0px;
+}
+header .logo{
+	color: #ffffff;
+	height: 50px;
+	line-height: 50px;
+	font-size: 24px;
+	float: left;
+	font-weight: bold;
+}
+header nav{
+	float: right;
+}
+header nav ul{
+	margin: 0;
+	padding: 0;
+	display: flex;
+}
+header nav ul li{
+	list-style: none;
+	padding: 0 15px;
+}
+header nav ul li a{
+	height: 50px;
+	line-height: 50px;
+	padding: 2px 30px;
+	color: #ffffff;
+	text-decoration: none;
+	display: block;
+	transition: 1.5s;
+}
+header nav ul li a:hover{
+	color: #ffffff;
+	background: #3399CC;
+	border: 0px;
+	border-radius: 30px 0px;
+	transition: 1.5s;
+}
+header nav ul li a.active{
+	color: #ffffff;
+	background: #2196f3;
+	border: 0px;
+	border-radius: 30px 0px;
+}
+.menu-toggle{
+	color: #ffffff;
+	float: right;
+	line-height: 50px;
+	font-size: 24px;
+	cursor: pointer;
+	display: none;
+}
+.content{
+	width: 100%;
+	min-height: 700px;
+}
+.content .title-1{
+	width: 474px;
+	font-family: 'Acme', sans-serif;
+	text-align: center;
+	font-size: 40px;
+	font-weight: bold;
+	top: 40%;
+	left: calc(50% - 237px);
+	position: absolute;
+	animation: intro-1 2s;
+}
+@keyframes intro-1{
+	from{
+		opacity: 0;
+		top: 10%;
+	}
+	to{
+		opacity: 1;
+		top: 40%;
+	}
+}
+.content .title-2{
+	width: 530px;
+	font-family: 'Acme', sans-serif;
+	text-align: center;
+	font-size: 75px;
+	top: 50%;
+	left: calc(50% - 265px);
+	position: absolute;
+	font-weight: bold;
+	font-family: 'Acme', sans-serif;
+	text-decoration: underline;
+	overflow: hidden;
+	border-right: .15em solid orange;
+	white-space: nowrap;
+	margin: 0 auto;
+	letter-spacing: .15em;
+	animation: 
+		typing 6s steps(35, end),
+		blink-caret .75s step-end infinite;
+}
+@keyframes typing{
+	from{
+		width: 0;
+	}
+	33.33%{
+		width: 0;
+	}
+	to{
+		width: 534px;
+	}
+}
+@keyframes m-typing{
+	from{
+		width: 0;
+	}
+	33.33%{
+		width: 0;
+	}
+	to{
+		width: 358px;
+	}
+}
+@keyframes blink-caret {
+	from,
+	to{
+		border-color: transparent;
+	}
+	50%{
+		border-color: orange;
+	}
+}
+.footer{
+	background-color: rgba(0,0,0,.8);
+	color: #fff;
+	text-align: center;
+	font-weight: bold;
+	padding: 30px;
+	position: relative;
+	bottom: 0;
+}
+
+@media screen and (max-width:900px) {
+	header{
+		background-color: #000;
+		position: fixed;
+		padding: 0 20px;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		border-radius: 0;
+	}
+	header.active{
+		background-color: #000;
+		position: fixed;
+		padding: 0 20px;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		border-radius: 0;
+	}
+	.menu-toggle{
+		display: block;
+	}
+	header nav{
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		background: #000000;
+		top: 70px;
+		left: -100%;
+		transition: 0.5s;
+	}
+	header nav.active{
+		left: 0;
+	}
+	header nav ul{
+		display: block;
+		text-align: center;
+	}
+	header nav ul li a{
+		border-bottom: 1px solid rgba(0,0,0,.2);
+	}
+	header nav ul li a:hover{
+		border-radius: 0px;
+	}
+	header nav ul li a.active{
+		border-radius: 0px;
+	}
+	.content{
+		min-height: 600px;
+	}
+	.content .title-1{
+		width: 400px;
+		font-size: 30px;
+		left: calc(50% - 200px);
+	}
+	.content .title-2{
+		width: 358px;
+		font-size: 50px;
+		left: calc(50% - 179px);
+		animation: m-typing 6s steps(35, end),
+		blink-caret .75s step-end infinite;
+	}
+}
